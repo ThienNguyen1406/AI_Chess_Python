@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./pygame-main/pygame-main/buildconfig/stubs"
+    ]
+}
