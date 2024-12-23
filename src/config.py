@@ -6,7 +6,8 @@ DIMENSION = 8
 SQ_SIZE = WIDTH // DIMENSION
 
 MAX_FPS = 30
-colorBoard = [(255, 255, 255), (0, 102, 0), (255, 255, 0)]
+colorBoard = [(255, 255, 0), (139, 69, 19), (255, 105, 180)]
+
 
 #   DEFINE SCREEN OF PANEL
 LEFT_PANEL = WIDTH

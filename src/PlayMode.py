@@ -12,7 +12,7 @@ class PlayMode(GameInit):
 
     def mainLoop(self):
         while self.running:
-            self.time_delta = self.clock.tick(MAX_FPS) / 1000
+            self.time_delta = self.clock.tick(MAX_FPS) / 100
             #   Handle event
             self.__eventHandler()
 

@@ -1,75 +1,75 @@
-# Xây dựng Game cờ vua sử dụng trí tuệ nhân tạo
+# Building chess game using artificial intelligence
 
-## I. Nội dung phương pháp
+## I. Method content
 
-Các phương pháp áp dụng:
+Applicable methods:
 
-- Thuật toán tìm kiếm nước đi Alpha-beta Prunning và Minimax
-- Các hàm đánh giá Heuristic
+- Alpha-Beta Prunning and Minimax algorithms
+- Heuristic evaluation functions
 
-### 1. Thuật toán tìm kiếm nước đi
+### 1.
 
-#### 1.1 Thuật toán Minimax
+#### 1.1 Minimax algorithm
 
-**Minimax** là giải thuật là một thuật toán đệ quy lựa chọn bước đi kế tiếp trong một trò chơi có hai người bằng cách so sánh các node trên cây trò chơi.
+** Minimax ** is an algorithm as a recursive algorithm to choose the next step in a game with two people by comparing node on the game tree.
 
-![alt text](result/pseudo_code_minimax.png)
+! [Alt Text] (Result/Pseudo_code_Minimax.png)
 
-- **Ưu điểm:** Tìm kiếm được mọi nước đi tiếp theo sau đó lựa chọn nước đi tốt nhất.
-- **Khuyết điểm:** Đối với các trò chơi có không gian trạng thái lớn như cờ vua  việc chỉ áp dụng giải thuật Minimax không còn hiệu quả nữa do sự bùng nổ tổ hợp quá lớn.
+- ** Advantages: ** Searching for every country to follow and then choose the best water.
+- ** Disadvantages: ** For games with large state space such as chess, only the application of the Minimax algorithm is no longer effective due to the great combination explosion.
 
-#### 1.2 Thuật toán Alpha-beta Prunning
+#### 1.2 Alpha-Beta Prunning algorithms
 
-**Alpha-beta Prunning** ra đời và dần thay thế thuật toán Minimax. Một trong số những ưu điểm đáng chú ý của nó là tinh giản được quá trình tìm nghiệm, loại trừ được một số trường hợp không thích hợp phát sinh và vẫn đảm bảo không ảnh hưởng đến kết quả sau cùng. 
+** Alpha-Beta Prunning ** was born and gradually replaced the Minimax algorithm. One of the noticeable advantages is to streamline the process of finding, eliminating some inappropriate cases arising and still ensuring no effect on the end result.
 
-![alt text](result/pseudo_code_alphabeta.png)
+! [Alt Text] (Result/pseudo_code_alphabeta.png)
 
-### 2. Các hàm đánh giá Heuristic
+### 2. Heuristic evaluation functions
 
-Sử dụng 2 hàm đánh giá cơ bản là: **Tổng điểm từng quân cờ** và **Điểm theo vị trí của từng quân**
+Using 2 basic assessment functions are: ** The total score of each chess pieces ** and ** points according to the position of each army **
 
-Vì mỗi quân cờ sẽ phát huy hết điểm mạnh dựa vào vị trí của nó trên bàn cờ. Do đó mỗi quân cờ sẽ có một ma trận điểm thưởng $8 × 8$.
+Because each chess piece will promote all the strengths based on its position on the chessboard. Therefore, each chess pieces will have a $ 8 × 8 reward matrix.
 
-Điểm từng quân cờ:
-![](result/scores.png)
+Flagpion points:
+! [] (Result/Scores.png)
 
-Điểm theo vị trí của quân tốt:
-![alt text](result/pawn_scores.png)
-
-
+Score according to the position of good troops:
+! [Alt Text] (Result/Pawn_scores.png)
 
 
 
-## II. Chạy chương trình
 
-Yêu cầu python 3.8
 
-```
-pip install -r requirement.txt
+## II. Running program
+
+Request Python 3.8
+
+`` ``
+PIP Install -R Requirement.txt
 
 python game.py
-```
+`` ``
 
-## III. Kết quả
+## III. Result
 
 ---
 
-1. Trò chơi có 2 chế độ:
+1. The game has 2 modes:
 
-- Người với Người
-- Người với Máy
+- People with people
+- People with the machine
 
-![img.png](result/menu.png)
+! [IMG.PNG] (Result/Menu.png)
 
-2. Các phím tắt hỗ trợ:
+2. Support shortcuts:
 
-- Phím Z: undo lại nước đi
-- Phím R: reset lại game
+- Key Z: Undo again
+- R keys R: reset the game
 
-Và các tính năng gợi ý nước có thể, lịch sử các nước đi,...
+And the features suggest possible water, history of traveling countries, ...
 
-![img.png](result/gameplay.png)
+! [img.png] (Result/Gameplay.png)
 
 ## Reference
 
-https://www.chessprogramming.org/Main_Page
+https://www.chessprogramming.org/main_page

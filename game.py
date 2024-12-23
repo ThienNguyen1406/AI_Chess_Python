@@ -13,7 +13,7 @@ class GameController:
     def __init__(self):
         pygame.init()
         pygame.display.set_caption("ChessAI")
-        self.icon = pygame.image.load('data/images/icon.jpg')
+        self.icon = pygame.image.load('data/images/icon1.png')
 
         pygame.display.set_icon(self.icon)
         self.screen = pygame.display.set_mode((WIDTH_WINDOW, HEIGHT_WINDOW))
