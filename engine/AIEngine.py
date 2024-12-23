@@ -85,10 +85,10 @@ piece_position_scores = {"wN": knight_scores,
                          }
 
 
-class AIEngine:
+class AIEngine: #xây dựng giải thuật
     def __init__(self, aiTurn):
         self.aiTurn = aiTurn
-        self.bestMove = None
+        self.bestMove = None 
         self.total_nodes = 0
         self.total_branch_cutoff = 0
         self.total_nodes_leaf = 0
@@ -132,7 +132,7 @@ class AIEngine:
                     else:
                         score -= piece_position_scores[piece][row][col]
         return score
-
+#MiniMax AI
     def MiniMax(self, gs: GameState, depth, returned_queue):
         self.__resetParameter()
         self.algoSearch = "Minimax"
@@ -140,7 +140,7 @@ class AIEngine:
         self.maxScore = self.__MiniMax(gs, depth, True)
         self.executionTime = time.time() - start
         returned_queue.put(self)
-
+#AlphaBeta AI
     def AlphaBetaPruning(self, gs: GameState, depth, alpha, beta, returned_queue):
         self.__resetParameter()
         self.algoSearch = "Alpha Beta"
@@ -156,7 +156,7 @@ class AIEngine:
         self.total_branch_cutoff = 0
         self.total_nodes_leaf = 0
         self.timeGenerateMoves = 0
-
+#Tìm đường đi tối ưu nhất bằng Minimax
     def __MiniMax(self, gs: GameState, depth, maximizingPlayer):
 
         """Return a move """
@@ -189,7 +189,7 @@ class AIEngine:
                     if depth == DEPTH:
                         self.bestMove = move
             return minEval
-
+#AlphaBeta 
     def __AlphaBetaPruning(self, gs: GameState, depth, alpha, beta, maximizingPlayer):
         if depth == 0:
             self.total_nodes_leaf += 1
