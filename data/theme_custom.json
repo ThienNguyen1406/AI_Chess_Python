@@ -1,14 +1,14 @@
 {
   "defaults": {
     "colours": {
-      "normal_bg": "#45494e",
-      "hovered_bg": "#35393e",
-      "disabled_bg": "#25292e",
-      "selected_bg": "#193754",
-      "dark_bg": "#15191e",
-      "normal_text": "#c5cbd8",
-      "hovered_text": "#FFFFFF",
-      "selected_text": "#FFFFFF",
+      "normal_bg": "#FFFFFF",  
+      "hovered_bg": "#FFFFFF",
+      "disabled_bg": "#FFFFFF",
+      "selected_bg": "#FFFFFF",
+      "dark_bg": "#FFFFFF",
+      "normal_text": "#000000",  
+      "hovered_text": "#000000",
+      "selected_text": "#000000",
       "disabled_text": "#6d736f",
       "link_text": "#0000EE",
       "link_hover": "#2020FF",
@@ -25,15 +25,15 @@
   },
   "label": {
     "colours": {
-      "dark_bg": "#000000",
-      "normal_text": "#ffffff"
+      "dark_bg": "#FFFFFF",  
+      "normal_text": "#000000"  
     }
   },
   "text_box": {
     "colours": {
       "link_text": "#F080E0,#8080E0,0",
       "link_hover": "#FF8FEF",
-      "regular_text": "#D0D0D0,#FFFFFF,#D050FF,90"
+      "regular_text": "#000000,#FFFFFF,#D050FF,90"  
     },
     "misc": {
       "shape": "rounded_rectangle",

@@ -131,7 +131,7 @@ class PlayAIMode(GameInit):
         self.ai_panel = pygame_gui.elements.UIWindow(
             rect=pygame.Rect((LEFT_AI, TOP_AI), (WIDTH_AI, HEIGHT_AI)),
             manager=self.manager,
-            window_display_title='Panel AI',
+            window_display_title='AI Thinking',
             draggable=False
         )
 

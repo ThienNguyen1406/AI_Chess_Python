@@ -47,7 +47,7 @@ class GameInit:
         self.chess_panel = pygame_gui.elements.UIWindow(
             rect=pygame.Rect((LEFT_PANEL, TOP_PANEL), (WIDTH_PANEL, HEIGHT_PANEL)),
             manager=self.manager,
-            window_display_title='Panel chess'
+            window_display_title='Panel Turn'
         )
 
         self.text_box = pygame_gui.elements.UITextBox(
